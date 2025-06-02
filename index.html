@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adarsh Srivastava</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body id="home">
+
+    <!-- Splash screen -->
+    <div id="cover">
+        <span class="title">A</span>
+    </div>
+
+    <!-- Animated background -->
+    <div id="particles-js"></div>
+
+    <!-- Scroll to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i
+            class="fa fa-lg fa-angle-up scroll-btn"></i></button>
+
+    <!-- Navigation menu -->
+    <div id="menu-cover">
+        <button class="hamburger-toggle" onClick="toggleHeader()">
+            <span class="hamburger-menu">
+                <span class="line line--top"></span>
+                <span class="line line--middle"></span>
+                <span class="line line--bottom"></span>
+            </span>
+        </button>
+
+        <div class="Site-interface">
+            <div class="offcanvas">
+                <nav class="offcanvas-nav">
+                    <ul class="offcanvas-nav__list">
+                        <li class="offcanvas-nav__item">
+                            <a href="#home" class="offcanvas-nav__link" onClick="toggleHeader()">Home</a>
+                        </li>
+                        <li class="offcanvas-nav__item">
+                            <a href="#about" class="offcanvas-nav__link" onClick="toggleHeader()">About</a>
+                        </li>
+                        <li class="offcanvas-nav__item">
+                            <a href="#projects" class="offcanvas-nav__link" onClick="toggleHeader()">Projects</a>
+                        </li>
+                        <li class="offcanvas-nav__item">
+                            <a href="#work" class="offcanvas-nav__link" onClick="toggleHeader()">Work</a>
+                        </li>
+                        <li class="offcanvas-nav__item">
+                            <a href="#appreciation" class="offcanvas-nav__link"
+                                onClick="toggleHeader()">Appreciation</a>
+                        </li>
+                        <li class="offcanvas-nav__item">
+                            <a href="#contact" class="offcanvas-nav__link" onClick="toggleHeader()">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="toggle-circle">
+                <div class="row">
+                    <svg class="hamburger-toggle__circle" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="left-element-block">
+        <ul class="social-block">
+            <li class="left-list">
+                <a class="left-social-icon" href="https://github.com/AdarshS1996" target="_blank"><i
+                        class="fa fa-github social-icon"></i></a>
+            </li>
+            <li class="left-list">
+                <a class="left-social-icon" href="https://www.instagram.com/adst1996/" target="_blank"><i
+                        class="fa fa-instagram social-icon"></i></a>
+            </li>
+            <li class="left-list">
+                <a class="left-social-icon" href="https://www.linkedin.com/in/adarsh-srivastava-0a35bb144"
+                    target="_blank"><i class="fa fa-linkedin social-icon"></i></a>
+            </li>
+            <li class="left-list">
+                <a class="left-social-icon" href="https://codepen.io/AdarshS1996" target="_blank"><i
+                        class="fa fa-codepen social-icon"></i></a>
+            </li>
+        </ul>
+    </aside>
+
+    <aside class="right-element-block">
+        <div class="right-email-block">
+            <a class="right-email-text" href="mailto:adarshsrivastava1996@gmail.com">adarshsrivastava1996@gmail.com</a>
+        </div>
+    </aside>
+
+    <div class="custom-modal-overlay">
+        <div class="custom-modal">
+            <i class="fa fa-lg fa-times" onClick="closeModal()"></i>
+            <div class="card modal-card">
+                <div class="card-body modal-card-body">
+
+                    <div id="is-project-click">
+                        <div id="modal-main-heading-begin" class="modal-card-title modal-heading-begin modal-project-heading"></div>
+
+                        <h5 id="modal-sub-heading" class="card-title modal-card-title"></h5>
+
+                        <h6 id="modal-sub-title" class="card-subtitle mb-5 text-muted modal-card-subtitle"></h6>
+                        
+                        <h6 class="card-subtitle text-muted modal-card-subtitle">Problem</h6>
+                        <p id="modal-problem-content" class="card-text modal-card-text"></p>
+
+                        <h6 class="card-subtitle text-muted modal-card-subtitle">Solution</h6>
+                        <p id="modal-solution-content" class="card-text modal-card-text"></p>
+
+                        <h6 class="card-subtitle text-muted modal-card-subtitle">Responsibilies</h6>
+                        <p id="modal-responsibility-content" class="card-text modal-card-text"></p>
+
+                        <h6 class="card-subtitle text-muted modal-card-subtitle">Technologies used</h6>
+                        <p  id="modal-tech-used-content" class="card-text modal-card-text"></p>
+
+                        <div id="modal-main-heading-end" class="modal-card-title modal-heading-end modal-project-heading"></div>
+                    </div>
+
+                    <div id="is-work-click">
+                        <div id="modal-main-work-heading-begin" class="modal-card-title modal-heading-begin modal-work-heading"></div>
+                        
+                        <p id="modal-work-content" class="card-text modal-card-text"></p>
+
+                        <div id="modal-main-work-heading-end" class="modal-card-title modal-heading-end modal-work-heading"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home section -->
+    <section class="content-block intro-text-block">
+        <div class="hi-text zi-10">Hi, my name is</div>
+        <div class="lh-1 name-text zi-10">Adarsh Srivastava</div>
+        <div class="mb-28 lh-1 designation-text zi-10">Software Engineer</div>
+        <div class="cv-button zi-10">
+            <a href="./assets/Adarsh Srivastava_CV_2years.pdf" target="_blank">
+                <button class="btn">Curriculum Vitae (PDF)</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- About section (about.js) -->
+    <section id="about" class="content-block">
+        <div class="heading-begin about about-heading-begin">about</div>
+
+        <div id="about-descriptions"></div>
+
+        <div class="heading-end about about-heading-end">about</div>
+    </section>
+
+    <!-- Project section (project.js) -->
+    <section id="projects" class="content-block">
+        <div class="heading-begin projects projects-heading-begin">projects</div>
+
+        <div id="project-cards" class="row"></div>
+        <div class="show-button-block">
+            <button class="btn" id="show-projects" onclick="showMoreButtonClick()">Show more</button>
+        </div>
+
+        <div class="heading-end projects projects-heading-end">projects</div>
+    </section>
+
+    <!-- Work section (work.js) -->
+    <section id="work" class="content-block">
+        <div class="heading-begin work work-heading-begin">works</div>
+
+        <div id="misc-cards" class="row"></div>
+
+        <div class="heading-end work work-heading-end">works</div>
+    </section>
+
+    <!-- Appreciation section (appreciation.js) -->
+    <section id="appreciation" class="content-block">
+        <div class="heading-begin appreciation">appreciations</div>
+
+        <div id="appreciation-swiper"></div>
+
+        <div class="heading-end appreciation">appreciations</div>
+    </section>
+
+    <!-- Contact section (contact.js) -->
+    <section id="contact" class="content-block">
+        <div class="heading-begin contact contact-heading-begin">contact</div>
+
+        <div class="row">
+            <div data-aos="fade-up" data-aos-duration="500" class="col-md-6 col-sm-12 col-xs-12 contact-col">
+                <iframe style="filter: invert(95%)" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Sector-62%20Noida+(Current%20Location)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                <a style="color:#101010" href='https://thesiswritingservice.net/'>professional Ghostwriting</a>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 contact-col">
+                <div class="mb-28">
+                    <div class="contact-location">Work location</div>
+                    <div>Block A, Sector 62, Noida, Uttar Pradesh, India</div>
+                    <div>Pincode - 201301</div>
+                </div>
+
+                <div class="mb-28">
+                    <div class="contact-location">Home town</div>
+                    <div>Ardali Bazar, Varanasi, Uttar Pradesh, India</div>
+                    <div>Pincode - 221002</div>
+                </div>
+                <div class="zi-10">
+                    <a class="mr-3" onClick="copyEmail()">
+                        <button class="btn" id="copy-email">Copy Email</button>
+                    </a>
+                    <a href="mailto:adarshsrivastava1996@gmail.com" target="_blank">
+                        <button class="btn">Say Hello!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="heading-end contact contact-heading-end">contact</div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="content-block footer">
+        <div class="footer-line">Designed &#38; Built by Adarsh Srivastava</div>
+        <div>&copy; 2021 All rights reserved.</div>
+    </footer>
+
+
+    <script type="text/javascript" src="./javascript/data.js"></script>
+    <script src="./node_modules/particles.js/particles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="./javascript/particles.js"></script>
+    <script type="text/javascript" src="./javascript/projects.js"></script>
+    <script type="text/javascript" src="./javascript/about.js"></script>
+    <script type="text/javascript" src="./javascript/work.js"></script>
+    <script type="text/javascript" src="./javascript/appreciation.js"></script>
+    <script type="text/javascript" src="./javascript/contact.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <script type='text/javascript'
+        src='https://embedmaps.com/google-maps-authorization/script.js?id=60ad4468d48a076259f62b094df07877f705d980'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
